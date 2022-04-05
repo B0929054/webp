@@ -1,5 +1,6 @@
 document.addEventListener("keydown",logkey);
-function logkey() {
-var x=document.getElementById("word").value; 
-document.getElementById("constant").innerHTML = x;
+function logkey(e) {
+var key=e.key
+var p=document.getElementById("constant");
+p.innerHTML+= key;
 }
