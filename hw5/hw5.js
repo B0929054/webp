@@ -44,25 +44,55 @@ function myfunction() {
   this.blur();
 }
 function coin(){
-  var selecttext=$('#ori option:selected').text();
-  var select=$('#goal option:selected').text();
-  if(selecttext=="請選擇初始車站" || select=="請選擇抵達車站"){$("#price").text(" ")};
-  if(selecttext=="台北車站" && select=="台北車站"){$("#price").text(" ")};
-  if((selecttext=="台北車站" && select=="三重站")||(selecttext=="三重站" && select=="台北車站")){$("#price").text("20")};
-  if((selecttext=="三重站" && select=="新北產業園區站")||(select=="三重站" && selecttext=="新北產業園區站")){$("#price").text("20")};
-  if((selecttext=="新北產業園區站" && select=="新莊副都心站")||(select=="新北產業園區站" && selecttext=="新莊副都心站")){$("#price").text("20")};
-  if((selecttext=="新莊副都心站" && select=="泰山站")||(selecttext=="新莊副都心站" && select=="泰山站")){$("#price").text("20")};
-  if(selecttext=="泰山站" && select=="泰山貴和站"){$("#price").text("20")};
-  if(selecttext=="泰山貴和站" && select=="體育大學站"){$("#price").text("20")};
-  if(selecttext=="體育大學站" && select=="長庚醫院站"){$("#price").text("20")};
-  if(selecttext=="長庚醫院站" && select=="林口站"){$("#price").text("20")};
-  if(selecttext=="林口站" && select=="山鼻站"){$("#price").text("30")};
-  if(selecttext=="山鼻站" && select=="機場第一航廈站"){$("#price").text("20")};
-  if(selecttext=="機場第一航廈站" && select=="機場第二航廈站"){$("#price").text("20")};
-  if(selecttext=="機場第二航廈站" && select=="機場旅館站"){$("#price").text("20")};
-  if(selecttext=="機場旅館站" && select=="大園站"){$("#price").text("20")};
-  if(selecttext=="大園站" && select=="領航站"){$("#price").text("20")};
-  if(selecttext=="領航站" && select=="桃園體育園區站"){$("#price").text("20")};
-  if(selecttext=="桃園體育園區站" && select=="興南站"){$("#price").text("20")};
-  if(selecttext=="興南站" && select=="環北站"){$("#price").text("20")};
+  var sel1_id=$('#ori').val();
+  var sel2_id=$('#goal').val();
+  if(sel1_id=="0" || sel2_id=="00"){$("#price").text(" ")};
+  if(sel1_id==1){
+      let a=sel2_id-sel1_id;
+                if(a==20){$("#price").text(" ")}
+                if(a==21){$("#price").text("20")}
+                if(a>21&&a<=24){$("#price").text("25")}
+                if(a==25){$("#price").text("40")}
+                if(a>=26&&a<=28){$("#price").text("70")}
+                if(a==29){$("#price").text("110")}
+                if(a==30){$("#price").text("120")}
+                if(a>30){$("#price").text("150")}};
+  if(sel1_id==2){
+        let b=sel2_id-sel1_id;
+        if(b==19){$("#price").text("20")}
+        if(b==20){$("#price").text(" ")}
+        if(b>=21&&b<24){$("#price").text("20")}
+        if(b==24){$("#price").text("30")}
+        if(b>24&&b<=27){$("#price").text("50")}
+        if(b==28){$("#price").text("90")}
+        if(b==29){$("#price").text("100")}
+        if(b>=30&&b<33){$("#price").text("130")}
+        if(b==33){$("#price").text("140")}
+        if(b>33){$("#price").text("150")}};
+    if(sel1_id==3){let c=sel2_id-sel1_id;
+            if(c==20){$("#price").text(" ")}
+            if((c>=21&&c<24)||c==19){$("#price").text("20")}
+            if((c>=24&&c<27)||c==18){$("#price").text("25")}
+            if(c==27){$("#price").text("65")}
+            if(c==28){$("#price").text("75")}
+            if(c>=29&&c<32){$("#price").text("105")}
+            if(c==32){$("#price").text("115")}
+            if(c==33){$("#price").text("125")}
+            if(c==34){$("#price").text("130")}
+            if(c==35){$("#price").text("140")}
+            if(c==36){$("#price").text("145")}
+            if(c>36){$("#price").text("150")}};
+        if(sel1_id==4){let d=sel2_id-sel1_id;
+                if(d==20){$("#price").text(" ")}
+                if((d>=21&&d<23)||d==19||d==18){$("#price").text("20")}
+                if((d>=23&&d<26)||d==17){$("#price").text("25")}
+                if(d==26){$("#price").text("65")}
+                if(d==27){$("#price").text("75")}
+                if(d>=28&&d<31){$("#price").text("105")}
+                if(d==31){$("#price").text("115")}
+                if(d==32){$("#price").text("125")}
+                if(d==33){$("#price").text("130")}
+                if(d==34){$("#price").text("140")}
+                if(d==35){$("#price").text("145")}
+                if(d>35){$("#price").text("150")}};
 }
