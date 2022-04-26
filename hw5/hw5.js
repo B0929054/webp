@@ -43,9 +43,7 @@ function myfunction() {
   });
   this.blur();
 }
-function coin(){
-  var sel1_id=$('#ori').val();
-  var sel2_id=$('#goal').val();
+function coin(){var sel1_id=$('#ori').val();var sel2_id=$('#goal').val();
   if(sel1_id=="0" || sel2_id=="00"){$("#price").text(" ")};
   if(sel1_id==1){
       let a=sel2_id-sel1_id;
@@ -94,5 +92,4 @@ function coin(){
                 if(d==33){$("#price").text("130")}
                 if(d==34){$("#price").text("140")}
                 if(d==35){$("#price").text("145")}
-                if(d>35){$("#price").text("150")}};
-}
+                if(d>35){$("#price").text("150")}};}
