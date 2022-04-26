@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .station, #origin_station {
+            border: solid 2px black;
+            max-width: fit-content;
+            min-width: 100px;
+        }
+        h3 {
+            display: inline;
+        }
+        .jit_schedule {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+        }
+    </style>
+    <script src="hw5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h4>Metro schedule</h4>
+        <div>
+        <span>
+        <select onclick="coin()" id="ori">
+            <option>請選擇初始車站</option>
+            <option class="100" id="1">台北車站</option>
+            <option class="200" id="2">三重站</option>
+            <option class="300" id="3">新北產業園區站</option>
+            <option class="400" id="4">新莊副都心站</option>
+            <option class="500" id="5">泰山站</option>
+            <option class="600" id="6">泰山貴和站</option>
+            <option class="700" id="7">體育大學站</option>
+            <option class="800" id="8">長庚醫院站</option>
+            <option class="900" id="9">林口站</option>
+            <option class="1000" id="10">山鼻站</option>
+            <option class="1100" id="11">坑口站</option>
+            <option class="1200" id="12">機場第一航廈站</option>
+            <option class="1300" id="13">機場第二航廈站</option>
+            <option class="1400" id="14">機場旅館站</option>
+            <option>大園站</option>
+            <option>領航站</option>
+            <option>高鐵桃園站</option>
+            <option>桃園體育園區站</option>
+            <option>興南站</option>
+            <option>環北站</option>
+        </select>
+    </span>
+    <span>
+        <select onclick="coin()" id="goal">
+            <option class="a">請選擇抵達車站</option>
+            <option>台北車站</option>
+            <option>三重站</option>
+            <option>新北產業園區站</option>
+            <option>新莊副都心站</option>
+            <option>泰山站</option>
+            <option>泰山貴和站</option>
+            <option>體育大學站</option>
+            <option>長庚醫院站</option>
+            <option>林口站</option>
+            <option>山鼻站</option>
+            <option>坑口站</option>
+            <option>機場第一航廈站</option>
+            <option>機場第二航廈站</option>
+            <option>機場旅館站</option>
+            <option>大園站</option>
+            <option>領航站</option>
+            <option>高鐵桃園站</option>
+            <option>桃園體育園區站</option>
+            <option>興南站</option>
+            <option>環北站</option>
+        </select>
+    </span>
+    <span>票價:</span>
+    <span id="price"></span>
+    </div>
+        <div class="jit_schedule">
+            <h3 id="origin_station">台北車站</h3><h3 class="travel_time">--0Min(s)0Sec(s)-></h3>
+        </div>
+        <button id="btn" onclick="myfunction()">Click</button>
+    </div>
+</body>
+</html>
